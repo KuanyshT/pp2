@@ -108,3 +108,24 @@ x = txt[0]
 txt = "Hello World"
 x = txt[2:5]
 
+#exercise4
+txt = " Hello World "
+x =txt.strip()
+
+#exercise5
+txt = "Hello World"
+txt = txt.upper()
+
+#exercise6
+txt = "Hello World"
+txt = txt.lower()
+
+#exercise7
+txt = "Hello World"
+txt = txt.replace("H","J")
+
+#exercise8
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
