@@ -27,5 +27,5 @@ fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(fruits[2:5])
 
 #EXERCISE8
-
-#EXERCISE9
+fruits = ["apple", "banana", "cherry"]
+print(len(fruits))
