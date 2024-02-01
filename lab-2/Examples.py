@@ -34,3 +34,20 @@ thisset = {"apple", "banana", "cherry"}
 
 for x in thisset:
   print(x)
+  
+a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+  
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x)
