@@ -18,3 +18,15 @@ obj2 = Square(5)
 
 print(obj1.area())
 print(obj2.area())
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+        
+    def area(self):
+        return self.width * self.length
+    
+obj3 = Rectangle(5, 4)
+
+print(obj3.area())
