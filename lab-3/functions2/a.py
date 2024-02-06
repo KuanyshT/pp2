@@ -113,7 +113,27 @@ def ctgrylist():
 print(ctgrylist())
 print()
 
+def avrgrate(list):
+    counter = 0
+    for movie in movies:
+        if movie["name"] in list:
+            counter += movie["imdb"]
+    return counter / len(list)
 
+mlst = ["We Two", "Exam", "AlphaJet"]
+            
+print(avrgrate(mlst))
+print()
 
-
+def avrgratebycategory():
+    ctgry = str(input("category: "))
+    counter = 0
+    c = 0
+    for movie in movies:
+        if movie["category"] == ctgry:
+            c += 1
+            counter += movie["imdb"]
+    return counter / c
+        
+print(avrgratebycategory())
             
