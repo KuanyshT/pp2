@@ -9,4 +9,6 @@ d2 = datetime.datetime(2024, 2, 19) # today
 print(diff(d1, d2))
 
 
+
+
     
