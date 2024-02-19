@@ -1,26 +1,51 @@
 import math
 
 class Point:
-    def create(self):
-        self.x1 = float(input("x1:"))
-        self.y1 = float(input("y1:"))
-        self.x2 = float(input("x2:"))
-        self.y2 = float(input("y2:"))
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
         
     def show(self):
-        print("(x1;y1) :", self.x1, self.y1, "(x2;y2) :", self.x2 , self.y2)
-    
-    def move(self):
-        self.x1 = float(input("change x1:"))
-        self.y1 = float(input("change y1:"))
-        self.x2 = float(input("change x2:"))
-        self.y2 = float(input("change y2:"))
+        print("x =", self.x, "y =", self.y)
         
-    def dist(self):
-        return math.sqrt((self.x2 - self.x1)**2 + (self.y2 - self.y1)**2)
+    def move(self):
+        self.x = float(input("x: "))
+        self.y = float(input("y: "))
+        
+    def dist(self, x2, y2):
+        return math.sqrt((x2 - self.x)**2 + (y2 - self.y)**2)
+        
+obj1 = Point(1, 2)
+obj1.show()
+print()
+obj1.move()
+print()
+obj1.show()
+print()
+print(obj1.dist(3, 4))
+print()
+
+class Point3d(Point):
+    def __init__(self, x, y, z):
+        Point.__init__(self, x, y)
+        self.z = z
+        
+    def show(self):
+        print("x =", self.x, "y =", self.y, "z =", self.z)
+        
+    def move(self):
+        self.x = float(input("x: "))
+        self.y = float(input("y: "))
+        self.z = float(input("z: "))
+
+    def dist(self, x2, y2, z2):
+        Point.dist(self, x2, y2)
+        return math.sqrt((x2 - self.x)**2 + (y2 - self.y)**2 + (z2 - self.z)**2)
     
-obj = Point()
-obj.create()
-obj.show()
-obj.move()
-print("the distance is :" , obj.dist())
+obj2 = Point3d(3, 4, 5)
+obj2.show()
+print()
+obj2.move()
+obj2.show()
+print()
+print(obj2.dist(10, 11, 12))
