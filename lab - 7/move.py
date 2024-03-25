@@ -9,8 +9,8 @@ pygame.display.set_caption("hanging around")
 
 # OTHERS----------------------------------------------
 blue = (0, 0, 255)
-x = 250
-y = 250
+x = 500
+y = 400
 
 # LOOP-----------------------------------------------
 done = False
@@ -29,9 +29,9 @@ while not done:
     elif keys[pygame.K_DOWN] and y < 775:  
         y += 20
 
-    screen.fill((255, 255, 255)) 
+    screen.fill((0, 0, 0)) 
     pygame.draw.circle(screen, blue, (x, y), 25)
     pygame.display.flip()
-    clock.tick(120)
+    clock.tick(30)
 
 pygame.quit()
