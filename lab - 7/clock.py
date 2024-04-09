@@ -33,7 +33,7 @@ while not done:
     mnarr = pygame.transform.rotate(img_min, -mnang)
     scarr = pygame.transform.rotate(img_sec, -scang)
     
-    screen.blit(mnarr, (508 - int(mnarr.get_width() / 2), 430 - int(mnarr.get_height() / 2)))
+    screen.blit(mnarr, (498 - int(mnarr.get_width() / 2), 410 - int(mnarr.get_height() / 2)))
     screen.blit(scarr, (498  - int(scarr.get_width() / 2), 423 - int(scarr.get_height() / 2)))
     
     pygame.display.flip()
