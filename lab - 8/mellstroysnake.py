@@ -5,16 +5,15 @@ import random
 pygame.init()
 
 #Sounds
-pygame.mixer.music.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/eating-sound-effect-36186.mp3")
+pygame.mixer.music.load("/Users/aiymtursynbekova/Downloads/am-am-am.mp3")
 
 #Images
 img_background = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/background.jpeg")
 img_apple = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/apple.png")
 img_snakeblockcircle = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/graphics_04.png")
-img_snakeeyes = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/graphics_00.png")
 img_snakeblocksquare = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/graphics_03.png")
-img_closedmouth = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/closed.png")
-img_openedmouth = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/open.png")
+img_closedmouth = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/output-onlinepngtools.png")
+img_openedmouth = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/output-onlinepngtools-2.png")
 
 # Set up the screen
 WIDTH, HEIGHT = 800, 600
@@ -89,8 +88,8 @@ while running:
         timer -= 1
         if timer != 0:
             if snake[0] == food:
-                pygame.mixer.music.play()
                 timer = 100
+                pygame.mixer.music.play()
                 food = (random.randint(0, GRID_WIDTH - 1), random.randint(0, GRID_HEIGHT - 1))
                 score += 1
             else:
@@ -123,11 +122,10 @@ while running:
             screen.blit(pygame.transform.scale(img_snakeblockcircle, (30, 30)), (segment[0] * GRID_SIZE, segment[1] * GRID_SIZE))
             screen.blit(pygame.transform.scale(img_snakeblocksquare, (26, 26)), (segment[0] * GRID_SIZE + 2, segment[1] * GRID_SIZE + 2))
             # pygame.draw.rect(screen, GREEN, (segment[0] * GRID_SIZE, segment[1] * GRID_SIZE, GRID_SIZE, GRID_SIZE))
-        screen.blit(pygame.transform.scale(img_snakeeyes, (30, 15)), (snake[0][0] * GRID_SIZE, snake[0][1] * GRID_SIZE))
         if ifnear:
-            screen.blit(pygame.transform.scale(img_openedmouth, (30, 15)), (snake[0][0] * GRID_SIZE, snake[0][1] * GRID_SIZE))
+            screen.blit(pygame.transform.scale(img_openedmouth, (30, 30)), (snake[0][0] * GRID_SIZE, snake[0][1] * GRID_SIZE))
         else:
-            screen.blit(pygame.transform.scale(img_closedmouth, (30, 15)), (snake[0][0] * GRID_SIZE, snake[0][1] * GRID_SIZE + 15))
+            screen.blit(pygame.transform.scale(img_closedmouth, (30, 30)), (snake[0][0] * GRID_SIZE, snake[0][1] * GRID_SIZE))
         # Draw the food
         screen.blit(pygame.transform.scale(img_apple, (30, 30)), (food[0] * GRID_SIZE, food[1] * GRID_SIZE))
         

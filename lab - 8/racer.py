@@ -19,7 +19,7 @@ coin_y = 0
 coins_counter = 0
 
 #SOUNDS----------------------------------
-bgmusic = pygame.mixer.music.load("")
+# bgmusic = pygame.mixer.music.load("")
 
 #IMAGES----------------------------------
 player_img = pygame.image.load("/Users/aiymtursynbekova/Desktop/pp2/lab - 8/PygameTutorial_3_0/Player.png")
@@ -37,7 +37,7 @@ player_speed = 7
 #ENEMY------------------------------------
 enemy_x = 0
 enemy_y = 0
-enemy_speed = 5
+enemy_speed = 10
 enemy_list = []
 
 #RESTART-----------------------------------

@@ -44,7 +44,7 @@ def random_song():
 def index(cs):
     return songs.index(cs)
 
-cs = random_song()
+cs = songs[4]
 previous_song = cs
 pause = True
 
